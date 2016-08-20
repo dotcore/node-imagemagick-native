@@ -80,10 +80,10 @@
         }],
         ['OS=="linux" or OS=="solaris" or OS=="freebsd"', { # not windows not mac
           "libraries": [
-            '<!@(Magick++-config --ldflags --libs)',
+            '<!@(pkg-config ImageMagick++ --libs)',
           ],
           'cflags': [
-            '<!@(Magick++-config --cflags --cppflags)'
+            '<!@(pkg-config ImageMagick++ --cflags)'
           ],
         }]
       ]
